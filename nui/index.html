@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FXScripts Banking</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+        <script src="https://use.fontawesome.com/e55bc130b8.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body style="display: none;">
+        <div class="main">
+            <div class="side-bar">
+                <div class="menu">
+                    <img src="logo.png" class="Logo">
+                    <hr class="HR"/>
+                    <br/>
+                    <div class="item">
+                        <a class="sub-btn"><i class="fas fa-table"></i>Actions<i class="fas fa-angle-right dropdown"></i></a>
+                        <div class="sub-menu">
+                            <a href="#" class="sub-item" id="home">Home</a>
+                            <a href="#" class="sub-item" id="deposit">Deposit</a>
+                            <a href="#" class="sub-item" id="withdraw">Withdraw</a>
+                        </div>
+                    </div>
+                    <div class="item"><a href="#"><i class="fas fa-info-circle"></i>About</a></div>
+                    <div class="item" style="cursor: default;">
+                        <a href="#" style="text-transform: uppercase; color: #7c7c7c; pointer-events: none; cursor: default;"><i class="fas fa-user"></i>Logged as <span id="player-name">Fixheko</span>
+                    </div>
+                    <div class="item" style="cursor: default;">
+                        <a href="#" style="text-transform: uppercase; color: #7c7c7c; margin-top: -2.5rem; pointer-events: none;"><i class="fas fa-id-card-alt"></i>Account ID: <span id="player-cid">AD15792</span>
+                    </div>
+                </div>
+            </div>
+            <div class="side-items">
+                <h5 style="text-transform: none; margin-left: .50rem; margin-top: .50rem; font-size: 1rem; ">Welcome back, to FXBanking.</h5>
+                <p style="text-transform: none; margin-left: .50rem; font-size: .80rem; width: 40rem; padding-bottom: 2rem;">Welcome to your personal banking account, from this screen you are able to complete everything, related to your account, deposits and withdraws..</p>
+                <h5 style="margin-left: 27rem;">Account Manager</h5>
+                <div class="grid">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 15px;">Bank balance</h5>
+                            <p class="card-text" id="bank-balance">€1,100,000</p>
+                            <p class="card-text" style="font-size: 15px;">Your currently Bank balance</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: 15px;">Cash balance</h5>
+                            <p class="card-text" id="cash-amount">€100,000</p>
+                            <p class="card-text" style="font-size: 15px;">Your currently cash balance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="window" id="home" style="display: none;">
+                    <h5 style="margin-left: 28.3rem; margin-top: 1rem;">Quick Actions</h5>
+                    <div class="depositss" style="margin-top: 1rem; margin-left: 18rem;">
+                        <a class="abtn" href="#" data-action="deposit" data-amount="100">Deposit €100</a>
+                        <a class="abtn" href="#" data-action="deposit" data-amount="1000">Deposit €1,000</a>
+                        <a class="abtn" href="#" data-action="deposit" data-amount="10000">Deposit €10,000</a>
+                    </div>
+                    <div class="depositss" style="margin-top: 2rem; margin-left: 18rem;">
+                        <a class="abtn" href="#" data-action="withdraw" data-amount="100">Withdraw €100</a>
+                        <a class="abtn" href="#" data-action="withdraw" data-amount="1000">Withdraw €1,000</a>
+                        <a class="abtn" href="#" data-action="withdraw" data-amount="10000">Withdraw €10,000</a>
+                    </div>
+                </div>
+                <div class="window" id="deposit" style="display: none;">
+                    <h5 style="margin-left: 28.3rem; margin-top: 1rem; color: #7c7c7c;">Deposit Action</h5>
+                    <input type="number" placeholder="$" class="form-control" id="depositAmount" name="depositAmount">
+                    <a class="abtn" href="#" id="initiateDeposit" style="margin-left: 26rem; margin-top: 1rem;">Complete deposit</a>
+                </div>
+                <div class="window" id="withdraw" style="display: none;">
+                    <h5 style="margin-left: 28.3rem; margin-top: 1rem; color: #7c7c7c;">Withdraw Action</h5>
+                    <input type="number" placeholder="$" class="form-control" id="withdrawAmount" name="withdrawAmount">
+                    <a class="abtn" href="#" id="initiateWithdraw" style="margin-left: 26rem; margin-top: 1rem;">Complete deposit</a>
+                </div>
+            </div>
+            <a class="abtn" href="#" id="log-out" style="width: 3%; margin-left: 79rem; margin-top: -85rem;"><i class="fa fa-times-circle"></i></a>
+
+        </div>
+    </body>
+</html>
